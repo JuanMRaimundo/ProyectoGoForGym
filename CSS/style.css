@@ -11,7 +11,7 @@ body {
 }
 /*HEADER*/
 .encabezado {
-	background-color: blue;
+	background-color: black;
 	display: flex;
 	justify-content: space-between;
 	position: sticky;
@@ -81,7 +81,8 @@ p {
 /*PAG DE ACTIVIDADES*/
 .actividades {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
 	column-gap: 10px;
 	row-gap: 10px;
 }
@@ -155,13 +156,16 @@ iframe {
 	border-radius: 50%;
 }
 /*PÁG DE CONTACTO*/
-.menuContacto {
+.contacto {
 	display: flex;
 	flex-direction: column;
 	row-gap: 5px;
 }
-.consulta {
+.contacto__consulta {
 	display: grid;
+}
+.contacto__consulta button {
+	margin-top: 10px;
 }
 /*PIE DE PÁGINA*/
 .pie {
@@ -170,6 +174,7 @@ iframe {
 	justify-content: space-around;
 	justify-items: center;
 	align-items: baseline;
+	margin-top: 15px;
 }
 
 /* MEDIA QUERIES */
@@ -207,9 +212,11 @@ iframe {
 	/* ACTIVIDADES */
 	.actividades {
 		grid-template-columns: 1fr;
+		grid-template-rows: 6fr;
 	}
 	.actividades div img {
 		object-fit: cover;
+		width: 100%;
 	}
 	/* CONTACTO */
 	.menuContacto {
@@ -234,11 +241,5 @@ iframe {
 	.pie {
 		flex-wrap: wrap-reverse;
 		justify-content: center;
-	}
-	.pie__publicidadMP {
-		display: none;
-	}
-	.pie__publicidadMIR {
-		display: none;
 	}
 }
