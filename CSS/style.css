@@ -50,6 +50,9 @@ main form {
 	margin-top: 7px;
 	margin-bottom: 7px;
 }
+.inicio__carousel {
+	margin-top: 20px;
+}
 h5 {
 	font-size: 0.5rem;
 }
@@ -179,9 +182,8 @@ iframe {
 	}
 	/* INICIO */
 	.inicio {
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-row-gap: 10px;
+		display: flex;
+		flex-direction: column;
 	}
 	/* ACTIVIDADES */
 	.actividades div img {
