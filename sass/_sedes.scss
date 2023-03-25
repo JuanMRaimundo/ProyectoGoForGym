@@ -1,0 +1,19 @@
+.sedes {
+	margin-bottom: $mbSecciones;
+	.sedes__iframes {
+		display: flex;
+		justify-content: space-around;
+		margin-top: 70px;
+		& li {
+			list-style: none;
+		}
+	}
+}
+
+.sedes ul li iframe {
+	width: 180px;
+	height: 180px;
+}
+iframe {
+	border-radius: 50%;
+}

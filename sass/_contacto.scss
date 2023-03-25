@@ -1,0 +1,13 @@
+.contacto {
+	display: flex;
+	flex-direction: column;
+	row-gap: 5px;
+	margin-bottom: 50px;
+	& &__consulta {
+		display: grid;
+		margin-bottom: $mbSecciones;
+		& button {
+			margin-top: 10px;
+		}
+	}
+}

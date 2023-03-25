@@ -1,0 +1,151 @@
+@import "index";
+@import "actividades";
+@import "asociate";
+@import "sedes";
+@import "contacto";
+
+/* variables */
+
+$naranjaGoForGym: rgb(220 53 69);
+$mbSecciones: 50px; /* REVISAR */
+
+/*Estilos Generales*/
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: "Alata", sans-serif;
+	color: $naranjaGoForGym;
+	background-color: white;
+}
+/*HEADER*/
+.offcanvas-body ul li a:hover {
+	background-color: $naranjaGoForGym !important;
+	color: black !important;
+	border-radius: 20% !important;
+}
+div.container-fluid a.navbar-brand button.navbar-toggler {
+	color: $naranjaGoForGym;
+}
+/*PIE DE PÁGINA*/
+
+.pie {
+	background-color: black;
+	color: $naranjaGoForGym;
+	display: grid;
+	grid-template-columns: repeat(3, 2fr);
+	justify-items: center;
+	border-top: 1px solid white;
+	.pie__redes {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+	.pie__logos {
+		display: flex;
+		justify-content: space-around;
+		& svg {
+			margin: 20px;
+		}
+	}
+	.pie__paginas {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		justify-content: flex-end;
+		margin-top: 10px;
+		& ul {
+			list-style: none;
+			display: flex;
+			flex-direction: column-reverse;
+			font-size: 0.7rem;
+		}
+		& h3 {
+			font-size: 1.3rem;
+			text-align: end;
+		}
+	}
+	.pie__legales {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		& p {
+			font-size: 0.7rem;
+		}
+	}
+}
+
+/* MEDIA QUERIES */
+
+/* Tablet */
+@media (min-width: 767px) and (max-width: 1024px) {
+	/* HEADER */
+	.encabezado .encabezado__menuPrincipal {
+		display: flex;
+		list-style: none;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+	}
+	/* ACTIVIDADES */
+	.actividades {
+		grid-template-columns: 1fr;
+		grid-template-rows: 6fr;
+	}
+}
+
+/* Mobile */
+
+@media (min-width: 320px) and (max-width: 576px) {
+	/* HEADER */
+	.container-fluid img {
+		width: 120px;
+		height: 120px;
+	}
+	/* INICIO */
+	.inicio {
+		display: flex;
+		flex-direction: column;
+	}
+	/* ACTIVIDADES */
+	.actividades div img {
+		object-fit: cover;
+		width: 100%;
+	}
+	/*PÁG SEDES*/
+	.sedes__iframes {
+		flex-direction: column;
+	}
+	/* CONTACTO */
+	.menuContacto {
+		display: flex;
+	}
+	.consulta {
+		display: grid;
+		justify-items: center;
+	}
+	/* ASOCIATE */
+	.elegiSedes li {
+		flex-direction: column;
+		align-items: center;
+	}
+	.d-flex {
+		display: flex !important;
+		flex-direction: column;
+	}
+	.row {
+		flex-direction: column;
+		align-items: center;
+	}
+	.elegiSedes ul {
+		padding-left: 3rem;
+	}
+	/* FOOTER */
+	.pie {
+		flex-wrap: wrap-reverse;
+		justify-content: center;
+	}
+}

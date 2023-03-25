@@ -1,0 +1,22 @@
+.actividades {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	column-gap: 10px;
+	row-gap: 10px;
+	margin-bottom: $mbSecciones;
+}
+.actividades div {
+	text-align: center;
+	color: $naranjaGoForGym;
+}
+.actividades div img {
+	object-fit: cover;
+	width: 100%;
+}
+.actividades div:hover {
+	filter: saturate(180%);
+}
+.actividades p {
+	font-size: 1.5rem;
+}
