@@ -9,6 +9,11 @@
 $naranjaGoForGym: rgb(220 53 69);
 $mbSecciones: 50px; /* REVISAR */
 
+/* mixings */
+@mixin flex-column {
+	display: flex;
+	flex-direction: column;
+}
 /*Estilos Generales*/
 @import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
 * {
@@ -19,7 +24,7 @@ $mbSecciones: 50px; /* REVISAR */
 body {
 	font-family: "Alata", sans-serif;
 	color: $naranjaGoForGym;
-	background-color: white;
+	background-color: black;
 }
 /*HEADER*/
 .offcanvas-body ul li a:hover {
@@ -52,8 +57,9 @@ div.container-fluid a.navbar-brand button.navbar-toggler {
 		}
 	}
 	.pie__paginas {
-		display: flex;
-		flex-direction: column;
+		/* display: flex;
+		flex-direction: column; */
+		@include flex-column();
 		align-items: flex-end;
 		justify-content: flex-end;
 		margin-top: 10px;
@@ -69,8 +75,9 @@ div.container-fluid a.navbar-brand button.navbar-toggler {
 		}
 	}
 	.pie__legales {
-		display: flex;
-		flex-direction: column;
+		/* display: flex;
+		flex-direction: column; */
+		@include flex-column();
 		justify-content: flex-end;
 		& p {
 			font-size: 0.7rem;
