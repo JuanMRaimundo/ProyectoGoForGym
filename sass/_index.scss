@@ -1,5 +1,5 @@
 .inicio {
-	background-image: url(../IMG/imagen-index.jpg);
+	background-image: url("../IMG/imagen-index.jpg");
 	background-size: 110%;
 	height: 86vh;
 	@include flex-column;
