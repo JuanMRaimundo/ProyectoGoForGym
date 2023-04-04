@@ -1,12 +1,33 @@
 .contacto {
-	display: flex;
-	flex-direction: column;
+	@include flex-column;
 	row-gap: 5px;
 	margin-bottom: 50px;
-	& &__consulta {
+
+	.contacto__banner {
+		background-image: url(../IMG/banner-contacto.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 60vh;
+	}
+
+	.contacto__form {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		text-align: center;
+	}
+	.contacto__parrafo {
+		width: 50%;
+		text-align: center;
+		p {
+			font-size: 1.3rem;
+			color: bisque;
+		}
+	}
+	.contacto__consulta {
 		display: grid;
-		margin-bottom: $mbSecciones;
-		& button {
+		margin-bottom: 50px;
+		button {
 			margin-top: 10px;
 		}
 	}

@@ -1,19 +1,28 @@
 .sedes {
 	margin-bottom: $mbSecciones;
-	.sedes__iframes {
-		display: flex;
-		justify-content: space-around;
-		margin-top: 70px;
-		& li {
-			list-style: none;
+	& h2 {
+		text-align: center;
+	}
+}
+.sedes__iframes {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 70px;
+	& li {
+		list-style: none;
+		iframe {
+			border-radius: 50%;
+			@include sizes(180px, 180px);
+			transition: all 1s;
+			&:hover {
+				transform: rotateX(360deg);
+			}
 		}
 	}
 }
-
-.sedes ul li iframe {
-	width: 180px;
-	height: 180px;
-}
-iframe {
-	border-radius: 50%;
+.sedes__banner {
+	background-image: url(../img/banner-sedes.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 60vh;
 }

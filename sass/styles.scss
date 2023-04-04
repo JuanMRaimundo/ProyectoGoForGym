@@ -1,19 +1,24 @@
-@import "index";
-@import "actividades";
-@import "asociate";
-@import "sedes";
-@import "contacto";
-
 /* variables */
-
 $naranjaGoForGym: rgb(220 53 69);
-$mbSecciones: 50px; /* REVISAR */
+$mbSecciones: 50px;
 
 /* mixings */
 @mixin flex-column {
 	display: flex;
 	flex-direction: column;
 }
+
+@mixin sizes($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+@import "index";
+@import "actividades";
+@import "asociate";
+@import "sedes";
+@import "contacto";
+
 /*Estilos Generales*/
 @import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
 * {
@@ -44,44 +49,39 @@ div.container-fluid a.navbar-brand button.navbar-toggler {
 	grid-template-columns: repeat(3, 2fr);
 	justify-items: center;
 	border-top: 1px solid white;
-	.pie__redes {
-		display: flex;
-		align-items: center;
-		flex-direction: column;
+	& h2 a {
+		text-decoration: none;
+		color: $naranjaGoForGym;
 	}
-	.pie__logos {
+	.pie__redes {
 		display: flex;
 		justify-content: space-around;
 		& svg {
-			margin: 20px;
+			margin: 40px;
 		}
 	}
-	.pie__paginas {
-		/* display: flex;
-		flex-direction: column; */
-		@include flex-column();
-		align-items: flex-end;
-		justify-content: flex-end;
-		margin-top: 10px;
-		& ul {
-			list-style: none;
-			display: flex;
-			flex-direction: column-reverse;
-			font-size: 0.7rem;
-		}
-		& h3 {
-			font-size: 1.3rem;
-			text-align: end;
-		}
+}
+.pie__paginas {
+	@include flex-column;
+	align-items: flex-end;
+	justify-content: flex-end;
+	margin-top: 10px;
+	& ul {
+		list-style: none;
+		display: flex;
+		flex-direction: column-reverse;
+		font-size: 0.7rem;
 	}
-	.pie__legales {
-		/* display: flex;
-		flex-direction: column; */
-		@include flex-column();
-		justify-content: flex-end;
-		& p {
-			font-size: 0.7rem;
-		}
+	& h3 {
+		font-size: 1.3rem;
+		text-align: end;
+	}
+}
+.pie__legales {
+	@include flex-column;
+	justify-content: flex-end;
+	& p {
+		font-size: 0.7rem;
 	}
 }
 
@@ -91,42 +91,113 @@ div.container-fluid a.navbar-brand button.navbar-toggler {
 @media (min-width: 767px) and (max-width: 1024px) {
 	/* HEADER */
 	.encabezado .encabezado__menuPrincipal {
-		display: flex;
+		@include flex-column;
 		list-style: none;
-		flex-direction: column;
 		align-items: center;
 		justify-content: space-evenly;
+	}
+	/* INICIO */
+	.inicio {
+		background-image: url(../IMG/imagen-index.jpg);
+		height: 129vh;
+		background-repeat: no-repeat;
+		display: flex;
+		margin-bottom: -394px;
+		& h1 {
+			text-align: center;
+			& h2 {
+				width: auto;
+				text-align: center;
+			}
+		}
+	}
+	.inicio__content {
+		@include flex-column;
+		align-items: center;
 	}
 	/* ACTIVIDADES */
 	.actividades {
 		grid-template-columns: 1fr;
 		grid-template-rows: 6fr;
 	}
+	/* SEDES */
+	.sedes__banner {
+		background-image: url(../img/banner-sedes-tablet.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 60vh;
+	}
 }
 
 /* Mobile */
 
-@media (min-width: 320px) and (max-width: 576px) {
+@media (min-width: 320px) and (max-width: 767px) {
 	/* HEADER */
 	.container-fluid img {
 		width: 120px;
 		height: 120px;
 	}
+
 	/* INICIO */
 	.inicio {
-		display: flex;
-		flex-direction: column;
+		background-image: url(../img/imagen-index-mobile1.jpg);
+		height: 98vh;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		@include flex-column;
+		align-items: stretch;
+		margin-bottom: -268px;
+		& h1 {
+			text-align: center;
+			width: 60%;
+			margin-left: 65px;
+		}
+		& h2 {
+			width: 93%;
+			text-align: center;
+		}
 	}
+	.inicio__content {
+		@include flex-column;
+		align-items: center;
+		.inicio__quienes-somos {
+			width: 100%;
+		}
+	}
+
 	/* ACTIVIDADES */
+	.actividades {
+		grid-template-columns: 1fr;
+		grid-template-rows: 6fr;
+	}
 	.actividades div img {
 		object-fit: cover;
 		width: 100%;
 	}
-	/*PÁG SEDES*/
+	/* SEDES */
+	.sedes h2 {
+		text-align: center;
+	}
+	.sedes__banner {
+		background-image: url(../img/banner-sedes-mobile.jpg);
+		background-repeat: no-repeat;
+		height: 24vh;
+		background-size: 100%;
+	}
 	.sedes__iframes {
 		flex-direction: column;
 	}
 	/* CONTACTO */
+	.contacto .contacto__banner {
+		background-image: url(../IMG/banner-contacto-mobile.jpg);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		height: 22vh;
+	}
+	.contacto__form {
+		@include flex-column;
+		align-items: center;
+	}
 	.menuContacto {
 		display: flex;
 	}
@@ -135,6 +206,12 @@ div.container-fluid a.navbar-brand button.navbar-toggler {
 		justify-items: center;
 	}
 	/* ASOCIATE */
+	.asociate__banner {
+		background-image: url(../IMG/banner-asociate-mobile.jpg);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		height: 25vh;
+	}
 	.elegiSedes li {
 		flex-direction: column;
 		align-items: center;
@@ -152,7 +229,9 @@ div.container-fluid a.navbar-brand button.navbar-toggler {
 	}
 	/* FOOTER */
 	.pie {
-		flex-wrap: wrap-reverse;
-		justify-content: center;
+		/* flex-wrap: wrap-reverse;
+		justify-content: center; */
+		grid-template-columns: auto;
+		border-top: 0.5px solid white;
 	}
 }

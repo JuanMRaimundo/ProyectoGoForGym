@@ -1,46 +1,44 @@
 .inicio {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-around;
-	text-decoration: none;
+	background-image: url(../IMG/imagen-index.jpg);
+	background-size: 110%;
+	height: 86vh;
+	@include flex-column;
+	justify-content: center;
+	align-items: baseline;
 	background-color: black;
 	color: $naranjaGoForGym;
 	text-align: center;
 	line-height: 222%;
-	margin-bottom: $mbSecciones;
+	margin-bottom: 50px;
+	& h1 {
+		margin-left: 100px;
+	}
+	& h2 {
+		text-align: justify;
+		color: bisque;
+		width: 560px;
+	}
 }
-/* main {
-	text-decoration: none;
-	background-color: black;
-	color: rgb(220 53 69);
-	text-align: center;
-	line-height: 222%;
-} */
-main form {
+
+.inicio__content {
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
+	padding: 20px;
+}
+
+.inicio__quienes-somos {
+	width: 50%;
+	@include flex-column;
 	align-items: center;
-	margin-top: 40px;
 }
-.inicio__menu form ul {
-	list-style: none;
+
+.inicio__content p {
+	font-size: 1.1rem;
+	text-align: justify;
+	padding: 30px 50px;
+	color: bisque;
 }
-.inicio__menu form ul li label {
-	margin-top: 7px;
-	margin-bottom: 7px;
-}
-.inicio__menu form ul li button {
-	margin-top: 7px;
-	margin-bottom: 7px;
-}
-.inicio__carousel {
-	margin-top: 20px;
-}
-h5 {
-	font-size: 0.5rem;
-}
-p {
-	font-size: 0.1rem;
+
+.carousel-item img {
+	@include sizes(600px, 500px);
 }
