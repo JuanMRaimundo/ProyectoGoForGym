@@ -20,9 +20,10 @@
 		/>
 		<link
 			rel="shortcut icon"
-			href="../img/logoPestañaF.png"
+			href="../images/logoPestañaF.png"
 			type="image/x-icon"
 		/>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 		<link rel="stylesheet" href="../sass/styles.css" />
 		<title>GoForGym</title>
 	</head>
@@ -35,7 +36,7 @@
 				<a class="navbar-brand" href="../index.html"
 					><img
 						class="logoHeader"
-						src="../img/logoHeader.png"
+						src="../images/logoHeader.png"
 						alt="logoGoForGym"
 						width="180"
 				/></a>
@@ -100,8 +101,8 @@
 			<section class="contacto__banner"></section>
 			<section class="contacto__form">
 				<section class="contacto__parrafo">
-					<h1>CONTACTANOS!</h1>
-					<p>
+					<h1 data-aos="zoom-in">CONTACTANOS!</h1>
+					<p data-aos="zoom-out">
 						¿Estás listo para dar el primer paso hacia una vida más saludable y
 						en forma? ¡Contáctanos hoy mismo! En nuestro gimnasio, nos
 						comprometemos a ayudarte a alcanzar tus metas de fitness y
@@ -181,7 +182,10 @@
 				<p>&copy;2023 GoForGym</p>
 			</div>
 		</footer>
-
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
 		<script
 			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
 			integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"

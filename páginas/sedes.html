@@ -20,9 +20,10 @@
 		/>
 		<link
 			rel="shortcut icon"
-			href="../img/logoPestañaF.png"
+			href="../images/logoPestañaF.png"
 			type="image/x-icon"
 		/>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 		<link rel="stylesheet" href="../sass/styles.css" />
 		<title>GoForGym</title>
 	</head>
@@ -35,7 +36,7 @@
 				<a class="navbar-brand" href="../index.html"
 					><img
 						class="logoHeader"
-						src="../IMG/LogoHeader.png"
+						src="../images/LogoHeader.png"
 						alt="logoGoForGym"
 						width="180"
 				/></a>
@@ -99,7 +100,12 @@
 		<section class="sedes__banner"></section>
 		<main class="sedes">
 			<h2>Elegí tu Sede</h2>
-			<ul class="sedes__iframes">
+			<ul
+				class="sedes__iframes"
+				data-aos="fade-down"
+				data-aos-easing="linear"
+				data-aos-duration="1500"
+			>
 				<li class="sedes__saltacapital">
 					<input type="checkbox" name="Salta Capital" class="sedes__salta" />
 					Salta
@@ -184,7 +190,10 @@
 				<p>&copy;2023 GoForGym</p>
 			</div>
 		</footer>
-
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
 		<script
 			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
 			integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"

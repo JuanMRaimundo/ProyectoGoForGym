@@ -3,7 +3,7 @@
 /* mixings */
 @import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
 .inicio {
-  background-image: url(../IMG/imagen-index.jpg);
+  background-image: url(../images/imagen-index.jpg);
   background-size: 110%;
   height: 86vh;
   display: flex;
@@ -45,11 +45,6 @@
   color: bisque;
 }
 
-.carousel-item img {
-  width: 600px;
-  height: 500px;
-}
-
 .actividades {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -77,7 +72,7 @@
 }
 
 .asociate__banner {
-  background-image: url(../IMG/banner-asociate.jpg);
+  background-image: url(../images/banner-asociate.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 60vh;
@@ -158,7 +153,7 @@ form div label {
 }
 
 .sedes__banner {
-  background-image: url(../img/banner-sedes.jpg);
+  background-image: url(../images/banner-sedes.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 60vh;
@@ -171,7 +166,7 @@ form div label {
   margin-bottom: 50px;
 }
 .contacto .contacto__banner {
-  background-image: url(../IMG/banner-contacto.jpg);
+  background-image: url(../images/banner-contacto.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 60vh;
@@ -211,6 +206,13 @@ body {
 }
 
 /*HEADER*/
+.navbar {
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+  background-color: black;
+}
+
 .offcanvas-body ul li a:hover {
   background-color: rgb(220, 53, 69) !important;
   color: black !important;
@@ -282,7 +284,7 @@ div.container-fluid a.navbar-brand button.navbar-toggler {
   }
   /* INICIO */
   .inicio {
-    background-image: url(../IMG/imagen-index.jpg);
+    background-image: url(../images/imagen-index.jpg);
     height: 129vh;
     background-repeat: no-repeat;
     display: flex;
@@ -307,7 +309,7 @@ div.container-fluid a.navbar-brand button.navbar-toggler {
   }
   /* SEDES */
   .sedes__banner {
-    background-image: url(../img/banner-sedes-tablet.jpg);
+    background-image: url(../images/banner-sedes-tablet.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 60vh;
@@ -322,7 +324,7 @@ div.container-fluid a.navbar-brand button.navbar-toggler {
   }
   /* INICIO */
   .inicio {
-    background-image: url(../img/imagen-index-mobile1.jpg);
+    background-image: url(../images/imagen-index-mobile1.jpg);
     height: 98vh;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -363,7 +365,7 @@ div.container-fluid a.navbar-brand button.navbar-toggler {
     text-align: center;
   }
   .sedes__banner {
-    background-image: url(../img/banner-sedes-mobile.jpg);
+    background-image: url(../images/banner-sedes-mobile.jpg);
     background-repeat: no-repeat;
     height: 24vh;
     background-size: 100%;
@@ -373,7 +375,7 @@ div.container-fluid a.navbar-brand button.navbar-toggler {
   }
   /* CONTACTO */
   .contacto .contacto__banner {
-    background-image: url(../IMG/banner-contacto-mobile.jpg);
+    background-image: url(../images/banner-contacto-mobile.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     height: 22vh;
@@ -392,7 +394,7 @@ div.container-fluid a.navbar-brand button.navbar-toggler {
   }
   /* ASOCIATE */
   .asociate__banner {
-    background-image: url(../IMG/banner-asociate-mobile.jpg);
+    background-image: url(../images/banner-asociate-mobile.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     height: 25vh;
@@ -414,8 +416,6 @@ div.container-fluid a.navbar-brand button.navbar-toggler {
   }
   /* FOOTER */
   .pie {
-    /* flex-wrap: wrap-reverse;
-    justify-content: center; */
     grid-template-columns: auto;
     border-top: 0.5px solid white;
   }

@@ -32,6 +32,12 @@ body {
 	background-color: black;
 }
 /*HEADER*/
+.navbar {
+	position: sticky;
+	top: 0px;
+	z-index: 100;
+	background-color: black;
+}
 .offcanvas-body ul li a:hover {
 	background-color: $naranjaGoForGym !important;
 	color: black !important;
@@ -40,6 +46,7 @@ body {
 div.container-fluid a.navbar-brand button.navbar-toggler {
 	color: $naranjaGoForGym;
 }
+
 /*PIE DE PÁGINA*/
 
 .pie {
@@ -98,7 +105,7 @@ div.container-fluid a.navbar-brand button.navbar-toggler {
 	}
 	/* INICIO */
 	.inicio {
-		background-image: url(../IMG/imagen-index.jpg);
+		background-image: url(../images/imagen-index.jpg);
 		height: 129vh;
 		background-repeat: no-repeat;
 		display: flex;
@@ -122,7 +129,7 @@ div.container-fluid a.navbar-brand button.navbar-toggler {
 	}
 	/* SEDES */
 	.sedes__banner {
-		background-image: url(../img/banner-sedes-tablet.jpg);
+		background-image: url(../images/banner-sedes-tablet.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
 		height: 60vh;
@@ -140,7 +147,7 @@ div.container-fluid a.navbar-brand button.navbar-toggler {
 
 	/* INICIO */
 	.inicio {
-		background-image: url(../img/imagen-index-mobile1.jpg);
+		background-image: url(../images/imagen-index-mobile1.jpg);
 		height: 98vh;
 		background-size: 100%;
 		background-repeat: no-repeat;
@@ -164,7 +171,6 @@ div.container-fluid a.navbar-brand button.navbar-toggler {
 			width: 100%;
 		}
 	}
-
 	/* ACTIVIDADES */
 	.actividades {
 		grid-template-columns: 1fr;
@@ -179,7 +185,7 @@ div.container-fluid a.navbar-brand button.navbar-toggler {
 		text-align: center;
 	}
 	.sedes__banner {
-		background-image: url(../img/banner-sedes-mobile.jpg);
+		background-image: url(../images/banner-sedes-mobile.jpg);
 		background-repeat: no-repeat;
 		height: 24vh;
 		background-size: 100%;
@@ -189,7 +195,7 @@ div.container-fluid a.navbar-brand button.navbar-toggler {
 	}
 	/* CONTACTO */
 	.contacto .contacto__banner {
-		background-image: url(../IMG/banner-contacto-mobile.jpg);
+		background-image: url(../images/banner-contacto-mobile.jpg);
 		background-repeat: no-repeat;
 		background-size: 100%;
 		height: 22vh;
@@ -207,7 +213,7 @@ div.container-fluid a.navbar-brand button.navbar-toggler {
 	}
 	/* ASOCIATE */
 	.asociate__banner {
-		background-image: url(../IMG/banner-asociate-mobile.jpg);
+		background-image: url(../images/banner-asociate-mobile.jpg);
 		background-repeat: no-repeat;
 		background-size: 100%;
 		height: 25vh;
@@ -229,8 +235,6 @@ div.container-fluid a.navbar-brand button.navbar-toggler {
 	}
 	/* FOOTER */
 	.pie {
-		/* flex-wrap: wrap-reverse;
-		justify-content: center; */
 		grid-template-columns: auto;
 		border-top: 0.5px solid white;
 	}
