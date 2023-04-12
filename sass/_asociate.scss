@@ -6,6 +6,13 @@
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
+	& h1 {
+		display: flex;
+		justify-content: flex-start;
+		margin-bottom: 20%;
+		width: 50%;
+		margin-left: 5%;
+	}
 }
 .asociate {
 	background-color: black;
@@ -18,6 +25,9 @@
 	.datospersonales {
 		text-align: center;
 	}
+}
+.row {
+	margin-left: 222px;
 }
 .elegiSedes li {
 	text-decoration: none;

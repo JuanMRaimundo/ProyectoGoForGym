@@ -65,6 +65,7 @@ div.container-fluid a.navbar-brand button.navbar-toggler {
 		justify-content: space-around;
 		& svg {
 			margin: 40px;
+			color: $naranjaGoForGym;
 		}
 	}
 }
@@ -148,16 +149,16 @@ div.container-fluid a.navbar-brand button.navbar-toggler {
 	/* INICIO */
 	.inicio {
 		background-image: url(../images/imagen-index-mobile1.jpg);
-		height: 98vh;
+		height: 87vh;
 		background-size: 100%;
 		background-repeat: no-repeat;
 		@include flex-column;
 		align-items: stretch;
-		margin-bottom: -230px;
+		margin-bottom: -100px;
 		& h1 {
 			text-align: center;
 			width: 60%;
-			margin-left: 65px;
+			margin-left: 45px;
 		}
 		& h2 {
 			width: 93%;
@@ -171,24 +172,36 @@ div.container-fluid a.navbar-brand button.navbar-toggler {
 			width: 100%;
 		}
 	}
+	.inicio__quienes-somos p {
+		text-align: center;
+		padding: 10px 25px;
+	}
 	/* ACTIVIDADES */
 	.actividades {
 		grid-template-columns: 1fr;
 		grid-template-rows: 6fr;
+		margin-right: 15px;
+		margin-left: 15px;
 	}
 	.actividades div img {
 		object-fit: cover;
 		width: 100%;
 	}
 	/* SEDES */
-	.sedes h2 {
-		text-align: center;
+	.sedes {
+		margin-top: 25%;
+		h2 {
+			text-align: center;
+		}
 	}
 	.sedes__banner {
 		background-image: url(../images/banner-sedes-mobile.jpg);
 		background-repeat: no-repeat;
 		height: 24vh;
 		background-size: 100%;
+		& h1 {
+			font-size: inherit;
+		}
 	}
 	.sedes__iframes {
 		flex-direction: column;
@@ -199,10 +212,22 @@ div.container-fluid a.navbar-brand button.navbar-toggler {
 		background-repeat: no-repeat;
 		background-size: 100%;
 		height: 22vh;
+		& h1 {
+			font-size: inherit;
+		}
 	}
 	.contacto__form {
 		@include flex-column;
 		align-items: center;
+		margin-top: 10%;
+	}
+	.contacto__parrafo {
+		& h1 {
+			font-size: inherit;
+		}
+		& p {
+			font-size: inherit;
+		}
 	}
 	.menuContacto {
 		display: flex;
@@ -212,11 +237,18 @@ div.container-fluid a.navbar-brand button.navbar-toggler {
 		justify-items: center;
 	}
 	/* ASOCIATE */
+	.asociate {
+		margin-top: 20%;
+	}
 	.asociate__banner {
 		background-image: url(../images/banner-asociate-mobile.jpg);
 		background-repeat: no-repeat;
 		background-size: 100%;
-		height: 25vh;
+		height: 20vh;
+		& h1 {
+			margin-top: 30%;
+			font-size: inherit;
+		}
 	}
 	.elegiSedes li {
 		flex-direction: column;
@@ -229,6 +261,7 @@ div.container-fluid a.navbar-brand button.navbar-toggler {
 	.row {
 		flex-direction: column;
 		align-items: center;
+		margin-left: 0px;
 	}
 	.elegiSedes ul {
 		padding-left: 3rem;

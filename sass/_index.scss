@@ -1,6 +1,7 @@
 .inicio {
 	background-image: url(../images/imagen-index.jpg);
 	background-size: 110%;
+	background-repeat: no-repeat;
 	height: 86vh;
 	@include flex-column;
 	justify-content: center;

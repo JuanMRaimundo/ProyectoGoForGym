@@ -8,6 +8,14 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		height: 60vh;
+		& h1 {
+			display: flex;
+			justify-content: flex-start;
+			align-items: stretch;
+			margin-top: 5%;
+			width: 50%;
+			margin-left: 5%;
+		}
 	}
 
 	.contacto__form {
