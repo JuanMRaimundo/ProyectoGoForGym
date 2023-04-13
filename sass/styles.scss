@@ -107,10 +107,10 @@ div.container-fluid a.navbar-brand button.navbar-toggler {
 	/* INICIO */
 	.inicio {
 		background-image: url(../images/imagen-index.jpg);
-		height: 129vh;
+		height: 50vh;
 		background-repeat: no-repeat;
 		display: flex;
-		margin-bottom: -394px;
+		margin-bottom: 20px;
 		& h1 {
 			text-align: center;
 			& h2 {
@@ -128,12 +128,33 @@ div.container-fluid a.navbar-brand button.navbar-toggler {
 		grid-template-columns: 1fr;
 		grid-template-rows: 6fr;
 	}
+	.actividades div img {
+		object-fit: cover;
+		width: 90%;
+	}
 	/* SEDES */
 	.sedes__banner {
-		background-image: url(../images/banner-sedes-tablet.jpg);
+		/* background-image: url(../images/banner-sedes-tablet.jpg); */
 		background-repeat: no-repeat;
 		background-size: cover;
 		height: 60vh;
+	}
+	/* CONTACTO */
+	.contacto__form {
+		width: 90%;
+		.contacto__parrafo {
+			margin-left: 20px;
+		}
+		.contacto__consulta {
+			margin-left: 10px;
+		}
+	}
+	/* ASOCIATE */
+	.row {
+		margin-left: 124px;
+	}
+	.pago input {
+		margin-left: 0px;
 	}
 }
 
