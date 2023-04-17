@@ -26,6 +26,11 @@
   width: 560px;
 }
 
+.inicio__carousel {
+  width: 800px;
+  height: 533px;
+}
+
 .inicio__content {
   display: flex;
   justify-content: space-between;
@@ -360,9 +365,6 @@ div.container-fluid a.navbar-brand button.navbar-toggler {
   /* ASOCIATE */
   .row {
     margin-left: 124px;
-  }
-  .pago input {
-    margin-left: 0px;
   }
 }
 /* Mobile */
